@@ -1,8 +1,68 @@
-// js/main.js
-
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- STATE MANAGEMENT ---
+    // --- 1. MOBILE MENU LOGIC (NEW) ---
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileBtn = document.getElementById('close-mobile-menu');
+
+    if (mobileBtn && mobileMenu && closeMobileBtn) {
+        // Open Menu
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        // Close Menu
+        closeMobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Close when clicking a link inside menu
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+    }
+
+    // --- 2. LOGGED IN STATE LOGIC (NEW) ---
+    // Check if user is logged in (saved in browser memory)
+    const user = localStorage.getItem('auraUser');
+    
+    // Find all "Account" icons that point to login.html
+    const accountLinks = document.querySelectorAll('a[href="login.html"]');
+
+    if (user) {
+        console.log("User is logged in:", user);
+        
+        // Change the link to go to Rewards instead of Login
+        accountLinks.forEach(link => {
+            link.href = "rewards.html";
+            
+            // Turn the icon Gold to show they are active
+            const icon = link.querySelector('.material-icons');
+            if(icon) {
+                icon.classList.add('text-aura-gold'); 
+            }
+        });
+    }
+
+    // Handle the Login Form Submit (Only runs on login.html)
+    const loginForm = document.querySelector('form[action="rewards.html"]');
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            // Get the email the user typed
+            const emailInput = loginForm.querySelector('input[type="email"]');
+            
+            if(emailInput && emailInput.value) {
+                // Save it to browser memory
+                localStorage.setItem('auraUser', emailInput.value);
+            }
+            // Form will now continue to redirect to rewards.html automatically
+        });
+    }
+
+
+    // --- 3. CART LOGIC (EXISTING) ---
     let cart = [];
     const cartSidebar = document.getElementById('cart-sidebar');
     const cartOverlay = document.getElementById('cart-overlay');
@@ -12,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // FIXED SELECTOR: Only selects badges that are absolute positioned (the red dots)
     const cartCountBadges = document.querySelectorAll('.material-icons + span.absolute'); 
 
-    // --- 1. OPEN/CLOSE LOGIC ---
     function toggleCart(show) {
+        if (!cartSidebar) return;
         if (show) {
             cartSidebar.classList.add('cart-open');
             cartOverlay.classList.remove('hidden');
@@ -42,16 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
         cartOverlay.onclick = () => toggleCart(false);
     }
 
-    // --- 2. ADD TO CART LOGIC ---
     const addToCartButtons = document.querySelectorAll('button');
-
     addToCartButtons.forEach(btn => {
         const icon = btn.querySelector('.material-icons');
         const isAddBtn = (icon && icon.innerText === 'add_shopping_cart') || btn.innerText.includes('Quick') || btn.innerText.includes('Add') || btn.innerText.includes('Shop Now');
 
         if (isAddBtn) {
             btn.addEventListener('click', (e) => {
-                // Only prevent default if it's not a link
                 if(btn.tagName !== 'A') {
                     e.preventDefault();
                     e.stopPropagation();
@@ -61,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (card) {
                     const title = card.querySelector('h3') ? card.querySelector('h3').innerText : 'Premium Item';
-                    // Robust price finding
                     let priceText = '0';
                     const priceEl = card.querySelector('span.text-aura-gold') || card.querySelector('span.font-bold.text-lg');
                     if(priceEl) priceText = priceEl.innerText;
@@ -82,22 +138,17 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             cart.push({ ...product, quantity: 1 });
         }
-
         updateCartUI();
         toggleCart(true); 
     }
 
-    // --- 3. RENDER UI ---
     function updateCartUI() {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         
-        // Update all badges found
         cartCountBadges.forEach(badge => {
             badge.innerText = totalItems;
             badge.classList.remove('hidden');
             if(totalItems === 0) badge.classList.add('hidden');
-            
-            // Animation pop
             badge.classList.add('scale-125');
             setTimeout(() => badge.classList.remove('scale-125'), 200);
         });
@@ -108,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             cart.forEach((item, index) => {
                 totalPrice += item.price * item.quantity;
-
                 const itemHTML = `
                     <div class="flex gap-4 mb-6 animate-fade-in border-b border-white/5 pb-4 last:border-0">
                         <img src="${item.imageSrc}" class="cart-item-image w-16 h-16 object-cover rounded-md bg-gray-800">
