@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>AURACOFFEE | Sign In</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body class="bg-aura-dark text-white font-display antialiased h-screen flex items-center justify-center relative overflow-hidden">
+
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2671&auto=format&fit=crop" class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-aura-dark via-aura-dark/80 to-aura-dark/40"></div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-md p-6">
+        <div class="text-center mb-8">
+            <a href="index.html" class="inline-flex items-center gap-2 group mb-6">
+                <span class="material-icons text-aura-gold text-3xl">auto_awesome</span>
+                <span class="text-2xl font-bold tracking-widest uppercase">AURA</span>
+            </a>
+            <h1 class="text-3xl font-bold mb-2">Welcome Back</h1>
+            <p class="text-gray-400 text-sm">Sign in to access your rewards and saved brews.</p>
+        </div>
+
+        <div class="bg-[#1E1915]/80 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-2xl">
+            <form action="rewards.html" class="space-y-5">
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Email Address</label>
+                    <div class="relative">
+                        <span class="material-icons absolute left-4 top-3 text-gray-500 text-sm">email</span>
+                        <input type="email" placeholder="you@example.com" class="w-full bg-[#120C08] border border-white/10 rounded-lg py-3 pl-10 pr-4 text-sm focus:border-aura-gold focus:ring-1 focus:ring-aura-gold outline-none transition-all placeholder-gray-600">
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500">Password</label>
+                        <a href="#" class="text-[10px] text-aura-gold hover:underline">Forgot?</a>
+                    </div>
+                    <div class="relative">
+                        <span class="material-icons absolute left-4 top-3 text-gray-500 text-sm">lock</span>
+                        <input type="password" placeholder="••••••••" class="w-full bg-[#120C08] border border-white/10 rounded-lg py-3 pl-10 pr-4 text-sm focus:border-aura-gold focus:ring-1 focus:ring-aura-gold outline-none transition-all placeholder-gray-600">
+                    </div>
+                </div>
+
+                <button class="w-full bg-aura-gold text-aura-dark font-bold py-3 rounded-lg uppercase tracking-widest hover:bg-white transition-all shadow-lg shadow-aura-gold/10">Sign In</button>
+            </form>
+
+            <div class="my-6 flex items-center gap-4">
+                <div class="h-px bg-white/10 flex-grow"></div>
+                <span class="text-[10px] text-gray-500 uppercase">Or continue with</span>
+                <div class="h-px bg-white/10 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <button class="flex items-center justify-center gap-2 border border-white/10 rounded-lg py-2.5 hover:bg-white/5 transition-colors">
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5">
+                    <span class="text-xs font-bold">Google</span>
+                </button>
+                <button class="flex items-center justify-center gap-2 border border-white/10 rounded-lg py-2.5 hover:bg-white/5 transition-colors">
+                    <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" class="w-5 h-5">
+                    <span class="text-xs font-bold">Facebook</span>
+                </button>
+            </div>
+
+            <p class="text-center text-xs text-gray-500 mt-8">
+                Not a member yet? <a href="signup.html" class="text-aura-gold font-bold hover:underline">Join the Club</a>
+            </p>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

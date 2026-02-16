@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AURACOFFEE | Our Menu</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script src="js/config.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* Custom Pill Navigation for Menu */
+        .menu-pill {
+            @apply px-6 py-2 rounded-full border border-white/10 text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-aura-gold hover:border-aura-gold transition-all whitespace-nowrap scroll-smooth;
+        }
+
+        .menu-pill:hover {
+            background: rgba(224, 142, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-aura-dark text-white font-display antialiased selection:bg-aura-gold selection:text-aura-dark">
+
+    <nav class="fixed top-0 w-full z-50 bg-aura-dark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-2 group" href="index.html">
+                <span class="material-icons text-aura-gold text-2xl">auto_awesome</span>
+                <span class="text-xl font-bold tracking-widest uppercase">AURA <span
+                        class="text-aura-gold">COFFEE</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#specials"
+                    class="text-[10px] font-bold uppercase tracking-widest text-white hover:text-aura-gold transition-colors">Specials</a>
+                <a href="#manual"
+                    class="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-aura-gold transition-colors">Manual
+                    Brews</a>
+                <a href="#bakes"
+                    class="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-aura-gold transition-colors">Bakes</a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a class="text-white/80 hover:text-aura-gold transition-colors" href="login.html">
+                    <span class="material-icons text-xl">account_circle</span>
+                </a>
+
+                <a class="border border-white/20 text-white font-bold px-6 py-2 rounded text-[10px] uppercase tracking-widest hover:bg-white hover:text-aura-dark transition-colors"
+                    href="shop.html">
+                    Order Online
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-[60vh] w-full flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover opacity-60"
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2670&auto=format&fit=crop"
+                alt="Pour over coffee">
+            <div class="absolute inset-0 bg-gradient-to-t from-aura-dark via-aura-dark/50 to-aura-dark/30"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 mt-10">
+            <span class="text-aura-gold text-[10px] font-bold uppercase tracking-[0.3em] block mb-2">The Digital
+                Experience</span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">Our Menu</h1>
+            <p class="text-gray-400 text-sm max-w-lg mx-auto mb-8 font-light">Indulge in a curated selection of Indian
+                estate beans and artisanal delicacies, crafted with precision and soul.</p>
+        </div>
+    </section>
+
+    <div class="sticky top-20 z-40 bg-aura-dark/95 border-b border-white/5 backdrop-blur-sm py-4">
+        <div class="max-w-[1400px] mx-auto px-6 flex gap-4 overflow-x-auto no-scrollbar justify-center">
+            <a href="#specials" class="menu-pill text-aura-gold border-aura-gold">Aura Specials</a>
+            <a href="#manual" class="menu-pill">Manual Brews</a>
+            <a href="#bakes" class="menu-pill">Artisanal Bakes</a>
+        </div>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto px-6 py-16 space-y-24">
+
+        <section id="specials" class="scroll-mt-40">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold">Aura Specials</h2>
+                <div class="h-[1px] bg-white/10 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-aura-card p-5 rounded-xl group hover:border-aura-gold/30 border border-white/5 transition-all duration-300">
+                    <div class="aspect-square rounded-lg overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=2670&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-aura-gold text-aura-dark text-[10px] font-bold px-2 py-1 rounded uppercase">Signature</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg group-hover:text-aura-gold transition-colors">Saffron Infused Cold
+                            Brew</h3>
+                        <span class="text-aura-gold font-bold text-lg">₹380</span>
+                    </div>
+                    <p class="text-gray-500 text-xs leading-relaxed">18-hour cold steeped Chikmagalur beans infused with
+                        Kashmiri Saffron and a hint of honey.</p>
+                </div>
+
+                <div
+                    class="bg-aura-card p-5 rounded-xl group hover:border-aura-gold/30 border border-white/5 transition-all duration-300">
+                    <div class="aspect-square rounded-lg overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=2537&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg group-hover:text-aura-gold transition-colors">Spiced Jaggery Latte
+                        </h3>
+                        <span class="text-aura-gold font-bold text-lg">₹320</span>
+                    </div>
+                    <p class="text-gray-500 text-xs leading-relaxed">Double espresso cut with steamed milk and organic
+                        desi jaggery, spiked with cardamom.</p>
+                </div>
+
+                <div
+                    class="bg-aura-card p-5 rounded-xl group hover:border-aura-gold/30 border border-white/5 transition-all duration-300">
+                    <div class="aspect-square rounded-lg overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=2574&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-white/10 p-1.5 rounded-full backdrop-blur-md">
+                            <span class="material-icons text-white text-xs">bolt</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg group-hover:text-aura-gold transition-colors">Dark Velvet Nitro
+                        </h3>
+                        <span class="text-aura-gold font-bold text-lg">₹410</span>
+                    </div>
+                    <p class="text-gray-500 text-xs leading-relaxed">Creamy, nitrogen-infused cold brew with natural
+                        notes of cocoa and dark berries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="manual" class="scroll-mt-40">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold">Manual Brews</h2>
+                <div class="h-[1px] bg-white/10 flex-grow"></div>
+            </div>
+
+            <div class="bg-aura-card rounded-2xl overflow-hidden border border-white/5 grid grid-cols-1 md:grid-cols-2">
+                <div class="relative h-80 md:h-auto group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e7385a861?q=80&w=2670&auto=format&fit=crop"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <p class="text-aura-gold italic font-serif text-lg border-l-2 border-aura-gold pl-4">
+                            "The ritual of the pour, the patience of the bloom. Choose your extraction method."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-8 md:p-12 flex flex-col justify-center">
+                    <div class="space-y-6">
+                        <div
+                            class="flex justify-between items-center border-b border-white/5 pb-4 group cursor-pointer hover:pl-2 transition-all">
+                            <div>
+                                <h4
+                                    class="font-bold flex items-center gap-2 text-lg group-hover:text-aura-gold transition-colors">
+                                    Hario V60</h4>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider mt-1">Clean, crisp,
+                                    highlights bright acidity</p>
+                            </div>
+                            <span class="text-aura-gold font-bold text-lg">₹280</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-center border-b border-white/5 pb-4 group cursor-pointer hover:pl-2 transition-all">
+                            <div>
+                                <h4
+                                    class="font-bold flex items-center gap-2 text-lg group-hover:text-aura-gold transition-colors">
+                                    Chemex</h4>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider mt-1">Pure, sediment-free
+                                    brew for delicate notes</p>
+                            </div>
+                            <span class="text-aura-gold font-bold text-lg">₹320</span>
+                        </div>
+                        <div
+                            class="flex justify-between items-center pb-4 group cursor-pointer hover:pl-2 transition-all">
+                            <div>
+                                <h4
+                                    class="font-bold flex items-center gap-2 text-lg group-hover:text-aura-gold transition-colors">
+                                    Aeropress</h4>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wider mt-1">Full-bodied,
+                                    versatile extraction</p>
+                            </div>
+                            <span class="text-aura-gold font-bold text-lg">₹260</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-white/5 rounded-xl p-4 flex items-center gap-4 border border-white/5">
+                        <div
+                            class="w-12 h-12 bg-aura-dark rounded-lg flex items-center justify-center text-aura-gold font-bold text-xl border border-white/10">
+                            M</div>
+                        <div>
+                            <p class="text-[10px] text-aura-gold font-bold uppercase tracking-widest mb-1">Today's
+                                Single Origin</p>
+                            <p class="text-sm font-bold text-white">MS Estate, Chikmagalur (Light Roast)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bakes" class="scroll-mt-40">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold">Artisanal Bakes</h2>
+                <div class="h-[1px] bg-white/10 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                <div class="flex gap-6 group">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=2526&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col justify-center w-full border-b border-white/5 pb-2">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="font-bold text-lg group-hover:text-aura-gold transition-colors">Sourdough
+                                Croissant</h3>
+                            <span class="text-aura-gold font-bold">₹220</span>
+                        </div>
+                        <p class="text-gray-500 text-xs leading-relaxed">72-hour fermented, French butter, flawlessly
+                            flaky.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 group">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=2574&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col justify-center w-full border-b border-white/5 pb-2">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="font-bold text-lg group-hover:text-aura-gold transition-colors">Almond Tea Cake
+                            </h3>
+                            <span class="text-aura-gold font-bold">₹240</span>
+                        </div>
+                        <p class="text-gray-500 text-xs leading-relaxed">Dense, moist sponge topped with roasted
+                            slivered almonds.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 group">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?q=80&w=2670&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col justify-center w-full border-b border-white/5 pb-2">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="font-bold text-lg group-hover:text-aura-gold transition-colors">Belgian Cocoa
+                                Tart</h3>
+                            <span class="text-aura-gold font-bold">₹310</span>
+                        </div>
+                        <p class="text-gray-500 text-xs leading-relaxed">70% dark chocolate ganache with a sea-salt
+                            sprinkle.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 group">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=2680&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col justify-center w-full border-b border-white/5 pb-2">
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="font-bold text-lg group-hover:text-aura-gold transition-colors">Smoked Paneer
+                                Focaccia</h3>
+                            <span class="text-aura-gold font-bold">₹290</span>
+                        </div>
+                        <p class="text-gray-500 text-xs leading-relaxed">Rosemary focaccia with tandoor-smoked paneer
+                            and pesto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="border-t border-white/5 pt-20 pb-10 bg-[#0E0906]">
+        <div class="max-w-[1400px] mx-auto px-6">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest pt-8">
+                <p>© 2026 Aura Coffee Pvt Ltd. All Rights Reserved.</p>
+                <div class="flex gap-4">
+                    <a href="shop.html" class="hover:text-aura-gold">Shop</a>
+                    <a href="book.html" class="hover:text-aura-gold">Book</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="cart-overlay" class="fixed inset-0 bg-black/60 z-[60] hidden backdrop-blur-sm transition-opacity"></div>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-80 md:w-96 bg-[#120C08] border-l border-white/10 z-[70] transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        
+        <div class="p-6 border-b border-white/5 flex justify-between items-center bg-[#1E1915]">
+            <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                Your Selection <span class="text-aura-gold text-xs bg-aura-gold/10 px-2 py-1 rounded-full" id="cart-count-header">Cart</span>
+            </h2>
+            <button id="close-cart" class="text-gray-400 hover:text-white transition-colors">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+
+        <div id="cart-items" class="flex-grow p-6 overflow-y-auto">
+            </div>
+
+        <div class="p-6 border-t border-white/5 bg-[#1E1915]">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-gray-400 text-xs font-bold uppercase tracking-widest">Subtotal</span>
+                <span id="cart-total" class="text-xl font-bold text-white">₹0</span>
+            </div>
+            <p class="text-[10px] text-gray-500 mb-6">Shipping & taxes calculated at checkout.</p>
+            <button class="w-full bg-aura-gold text-aura-dark font-bold py-4 rounded-lg uppercase tracking-widest hover:bg-white transition-all shadow-lg shadow-aura-gold/20">
+                Checkout
+            </button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

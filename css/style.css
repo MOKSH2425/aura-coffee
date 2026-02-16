@@ -1,0 +1,131 @@
+/* css/style.css */
+
+/* --- Base Settings --- */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #120C08; /* Fallback for aura-dark */
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Scrollbar Customization --- */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* --- Navigation & Links --- */
+.nav-link {
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #9CA3AF;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: white;
+}
+
+/* --- Buttons --- */
+.btn-gold {
+    background-color: #E08E00;
+    color: #120C08;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: all 0.3s ease;
+}
+.btn-gold:hover {
+    background-color: white;
+    color: #120C08;
+}
+
+.btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: all 0.3s ease;
+}
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Components --- */
+/* Glass Effect */
+.glass-nav {
+    backdrop-filter: blur(12px);
+    background-color: rgba(18, 12, 8, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Booking Page Specifics */
+.time-slot {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #9CA3AF;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+}
+.time-slot:hover, .time-slot.active {
+    border-color: #E08E00;
+    color: #E08E00;
+}
+.time-slot.active {
+    background-color: rgba(224, 142, 0, 0.1);
+}
+
+/* Rewards Page Specifics */
+.aura-card-gradient {
+    background: linear-gradient(135deg, #4A3B2A 0%, #2A2118 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- Append to css/style.css --- */
+
+/* Cart Sidebar Styles */
+#cart-sidebar {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.cart-open {
+    transform: translateX(0) !important;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0.375rem;
+}
+
+/* Scrollbar for cart items */
+#cart-items::-webkit-scrollbar {
+    width: 4px;
+}
+#cart-items::-webkit-scrollbar-thumb {
+    background-color: #374151;
+    border-radius: 4px;
+}
