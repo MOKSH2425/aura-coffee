@@ -1,0 +1,93 @@
+
+> aura-coffee@0.1.0 build
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 3 errors:
+./app/admin/[[...index]]/page.js:4:1
+Module not found: Can't resolve '../../../../sanity.config'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { [33mNextStudio[39m } [36mfrom[39m [32m'next-sanity/studio'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m config [36mfrom[39m [32m'../../../../sanity.config'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mStudioPage[39m() {
+ [90m 7 |[39m   [36mreturn[39m [33m<[39m[33mNextStudio[39m config[33m=[39m{config} [33m/[39m[33m>[39m[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/[[...index]]/page.js [Client Component Browser]
+    ./app/admin/[[...index]]/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/admin/[[...index]]/page.js [Client Component SSR]
+    ./app/admin/[[...index]]/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./lib/sanity.js:1:1
+Module not found: Can't resolve 'next-sanity'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m { createClient } [36mfrom[39m [32m'next-sanity'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m [36mimport[39m imageUrlBuilder [36mfrom[39m [32m'@sanity/image-url'[39m[33m;[39m
+ [90m 3 |[39m
+ [90m 4 |[39m [36mexport[39m [36mconst[39m projectId [33m=[39m process[33m.[39menv[33m.[39m[33mNEXT_PUBLIC_SANITY_PROJECT_ID[39m[33m;[39m[0m
+
+
+
+Import traces:
+  Server Component:
+    ./lib/sanity.js
+    ./app/locations/page.js
+
+  Client Component Browser:
+    ./lib/sanity.js [Client Component Browser]
+    ./app/shop/page.js [Client Component Browser]
+    ./app/shop/page.js [Server Component]
+
+  Client Component SSR:
+    ./lib/sanity.js [Client Component SSR]
+    ./app/shop/page.js [Client Component SSR]
+    ./app/shop/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./app/admin/[[...index]]/page.js:3:1
+Module not found: Can't resolve 'next-sanity/studio'
+[0m [90m 1 |[39m [32m'use client'[39m[33m;[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { [33mNextStudio[39m } [36mfrom[39m [32m'next-sanity/studio'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m config [36mfrom[39m [32m'../../../../sanity.config'[39m[33m;[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mStudioPage[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/admin/[[...index]]/page.js [Client Component Browser]
+    ./app/admin/[[...index]]/page.js [Server Component]
+
+  Client Component SSR:
+    ./app/admin/[[...index]]/page.js [Client Component SSR]
+    ./app/admin/[[...index]]/page.js [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./app/admin/[[...index]]/page.js:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./lib/sanity.js:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./app/admin/[[...index]]/page.js:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
